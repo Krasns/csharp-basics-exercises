@@ -16,7 +16,7 @@ namespace SumAverageRunningInt
                 sum += number;
             }
 
-            average = sum/100;
+            average = sum/100.0;
 
             Console.WriteLine($"The sum of 1 to 100 is {sum}");
             Console.WriteLine($"The average is {average}");
