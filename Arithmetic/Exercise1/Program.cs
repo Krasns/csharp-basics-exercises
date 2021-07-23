@@ -18,13 +18,10 @@ namespace Exercise1
             SecondDiff = SecondNumber - FirstNumber;
 
             if (FirstNumber == 15 || SecondNumber == 15 || Sum == 15 || FirstDiff == 15 || SecondDiff == 15)
-            {
                 Console.WriteLine(true);
-            }
             else
-            {
                 Console.WriteLine(false);
-            }
+            
             Console.ReadKey();
         }
     }
