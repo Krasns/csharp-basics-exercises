@@ -15,7 +15,7 @@ namespace Exercise9
 
             BMI = (Weight * 703) / (Height * Height);
 
-            if (BMI < 18.5)
+            if (BMI <= 18.5)
             {
                 Console.WriteLine($"your BMI is {BMI} ,eat more!!");
             }
