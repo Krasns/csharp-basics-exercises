@@ -46,8 +46,6 @@ namespace CalculateArea
         {
 
             int userChoice;
-            
-            // keyboard input
 
             // Display the menu.
             Console.WriteLine("Geometry Calculator\n");
@@ -65,7 +63,7 @@ namespace CalculateArea
             {
                 Console.WriteLine("Please enter a valid range: 1, 2, 3, or 4: ");
                 keyboard = Console.ReadKey();
-                userChoice = keyboard.KeyChar;
+                int.TryParse(keyboard.KeyChar.ToString(), out userChoice);
             }
 
             return userChoice;
