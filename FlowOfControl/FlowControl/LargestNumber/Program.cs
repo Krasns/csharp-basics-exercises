@@ -18,6 +18,7 @@ namespace LargestNumber
             int maxValue = Math.Max(Math.Max(input1, input2), input3);
             Console.WriteLine("Largest value : " + maxValue);
             Console.ReadKey();
+
         }
     }
 }
