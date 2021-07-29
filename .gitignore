@@ -416,3 +416,4 @@ FodyWeavers.xsd
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,dotnetcore
 /**/*/*.csproj
+**/*/App.config
