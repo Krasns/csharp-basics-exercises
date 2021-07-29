@@ -21,7 +21,6 @@ namespace PositiveNegativeNumber
             {
                 Console.WriteLine("Number is zero");
             }
-
             Console.ReadKey();
         }
     }
