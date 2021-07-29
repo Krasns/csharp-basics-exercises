@@ -24,14 +24,13 @@ namespace Exercise1
             };
             
             Console.WriteLine("Original numeric array : " + string.Join("," , myArray1));
-
             Array.Sort(myArray1);
             Console.WriteLine("Sorted numeric array : " + string.Join("," , myArray1));
     
             Console.WriteLine("Original string array : " + string.Join("," , myArray2));
-
             Array.Sort(myArray2);
             Console.WriteLine("Sorted string array : " + string.Join("," , myArray2));
+
             Console.ReadKey();
         }
     }
