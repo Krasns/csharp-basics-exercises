@@ -6,72 +6,89 @@ namespace Exercise8
     {
         static void Main(string[] args)
         {
-            string[] words ={ "randomly", "guesses", "strings", "separated", "elements", "access", "specific", "indexes" };
+            string[] words = { "randomly", "guesses", "strings", "separated", "elements", "access", "specific", "indexes" };
             Random rand = new Random();
-            int number = rand.Next(0, words.Length);
-            int rong = 0;
-            int right = 0;
-            char[] word = words[number].ToCharArray();
-            string input;
-            string rightLeter = "";
-            string rongLetters = "";
-            Console.WriteLine(word);
-            Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 
-            Console.Write("Word:\t");
-            for (int i = 0; i < word.Length; i++)
+            Console.WriteLine("Play game: yes or no");
+            string answer = Console.ReadLine();
+
+            while (answer != "no")
             {
-                Console.Write(word[i].ToString().Replace(word[i].ToString(), "_") + " ");
-            }
-            Console.WriteLine();
+                int number = rand.Next(0, words.Length);
+                int wrong = 0;
+                int right = 0;
 
-            Console.Write("Misses:\t");
-            Console.WriteLine(rongLetters);
+                char[] word = words[number].ToCharArray();
+                char[] wordWithUnderline = words[number].ToCharArray();
 
-            Console.Write("Guess:\t");
-            input = Console.ReadLine();
-
-            do
-            {
-                Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-                
-                    if (word.ToString().Contains(input))
-                        rightLeter += input;
-                
+                string input;
+                string Letters = "";
+                string Letter = "";
 
                 for (int i = 0; i < word.Length; i++)
                 {
-                        if (word[i].ToString().Contains(rightLeter[i]))
-                        {
-                        Console.Write(word[i].ToString().Replace(word[i].ToString(), rightLeter) + " ");
-                        right++;
-                        }
-                    else
+                    if (char.IsLetter(word[i]))
                     {
-                        Console.Write(word[i].ToString().Replace(word[i].ToString(), "_") + " ");
+                        wordWithUnderline[i] = Convert.ToChar("_");
                     }
                 }
-                Console.WriteLine();
 
-                Console.Write("Misses:\t");
-                if (word.ToString().IndexOf(input) == -1)
-                {
-                    rongLetters += input;
-                }
-                Console.WriteLine(rongLetters);
+                //Console.WriteLine(word); To see the answer uncomment
+                Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-");
+
+                Console.Write("Word:\t");
+                Console.WriteLine(wordWithUnderline);
+
+                Console.Write("Inputs:\t");
+                Console.WriteLine(Letters);
 
                 Console.Write("Guess:\t");
                 input = Console.ReadLine();
 
-                rong++;
-            } while (rong != word.Length + 10 || right == word.Length);
+                do
+                {
+                    Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 
-            if (right == word.Length)
-                Console.WriteLine("YOU GOT IT!");
-            else
-                Console.WriteLine("It's not coming home!");
+                    foreach (var letter in word)
+                    {
+                        if (letter == Convert.ToChar(input))
+                        {
+                            for (int i = 0; i < word.Length; i++)
+                            {
+                                if (word[i] == Convert.ToChar(input))
+                                {
+                                    wordWithUnderline[i] = word[i];
+                                }
+                            }
+                            right++;
+                        }
+                        else
+                        {
+                            Letter = input;
+                        }
+                    }
+                    Console.WriteLine(wordWithUnderline);
 
-            Console.ReadKey();
+                    Console.Write("Inputs:\t");
+                    Letters += Letter.Substring(0, 1);
+                    Console.WriteLine(Letters);
+
+                    Console.Write("Guess:\t");
+                    input = Console.ReadLine();
+
+                    wrong++;
+                } while (wrong != word.Length + 10 && right != word.Length);
+
+                if (right == word.Length)
+                    Console.WriteLine("YOU GOT IT!");
+                else
+                    Console.WriteLine("It's not coming home!");
+
+                Console.WriteLine("Play game: yes or no");
+                answer = Console.ReadLine();
+
+                Console.ReadKey();
+            }
         }
     }
 }
