@@ -9,18 +9,75 @@ namespace TicTacToe
         private static void Main(string[] args)
         {
             InitBoard();
-            DisplayBoard();
         }
 
         private static void InitBoard()
         {
-            // fills up the board with blanks
-            for (var r = 0; r < 3; r++)
+            int player = 0;
+            int row;
+            int column;
+            int count = 0;
+            string location;
+            char[,] savingData = new char[3, 3];
+            while (count != 2)
             {
-                for (var c = 0; c < 3; c++)
-                    board[r, c] = ' ';
+
+                if (player == 0)
+                {
+                    Console.Write("'O', choose your location (row -> space -> column): ");
+                    location = Console.ReadLine();
+                    var data = location.Split(' ');
+                    row = int.Parse(data[0]);
+                    column = int.Parse(data[1]);
+
+                    for (var r = 0; r < 3; r++)
+                    {
+                        for (var c = 0; c < 3; c++)
+                        {
+                            if (r == row && c == column)
+                            {
+                                board[r, c] = 'O';
+                                savingData[row,column] = 'O';
+                            }
+                            else
+                            {
+                                board[r, c] = ' ';
+                            }
+                        }
+                    }
+                    DisplayBoard();
+                    player = 1;
+                }
+                else
+                {
+                    Console.Write("'X', choose your location (row -> space -> column): ");
+                    location = Console.ReadLine();
+                    var data = location.Split(' ');
+                    row = int.Parse(data[0]);
+                    column = int.Parse(data[1]);
+
+                    for (var r = 0; r < 3; r++)
+                    {
+                        for (var c = 0; c < 3; c++)
+                        {
+                            if (r == row && c == column)
+                            {
+                                board[r, c] = 'X';
+                                savingData[row, column] = 'X';
+                            }
+                            else
+                            {
+                                board[r, c] = ' ';
+                            }
+                        }
+                    }
+                    DisplayBoard();
+                    player = 0;
+                }
+
+                count++;
             }
-            
+
         }
 
         private static void DisplayBoard()
