@@ -46,7 +46,7 @@ namespace Exercise8
                 input = Console.ReadLine();
 
                 do
-                {
+                { 
                     Console.WriteLine("-=-=-=-=-=-=-=-=-=-=-=-=-=-");
 
                     foreach (var letter in word)
