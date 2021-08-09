@@ -6,38 +6,43 @@ namespace Exercise8_AsciiFigure
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 3; i++)
-            {
-                for (int j = 0; j < 8*2; j++)
-                {
-                    if (i == 0 && j < 8)
-                    {
-                        Console.Write("/");
-                    }
-                    else if (i == 0 && j < 16)
-                    {
-                        Console.Write("\\");
-                    }
-                    else if (i == 1 && j < 4)
-                    {
-                        Console.Write("/");
-                    }
-                    else if (i == 1 && j > 4 && j <= 12)
-                    {
-                        Console.Write("*");
-                    }
-                    else if (i == 1 && j > 12 && j <= 16)
-                    {
-                        Console.Write("\\");
-                    }
-                    else if (i == 2)
-                    {
-                        Console.Write("*");
-                    }
+            Console.Write("Enter number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int length = 0;
+            int plusEight = 0;
+            int count = 1;
 
+            if (number > 1)
+            {
+                while (count != number)
+                {
+                    length += 8;
+                    count ++;
                 }
+                for (int i = 0; i < number; i++)
+                {
+                    for (int j = 0; j < length / 2; j++)
+                    {
+                        Console.Write("/");
+                    }
+                    for (int j = 0; j < plusEight; j++)
+                    {
+                        Console.Write("*");
+                    }
+                    for (int j = 0; j < length / 2; j++)
+                    {
+                        Console.Write("\\");
+                    }
                     Console.WriteLine();
+                    length -= 8;
+                    plusEight += 8;
+                }
             }
+            else
+            {
+            Console.WriteLine("****");
+            }
+            Console.ReadKey();
         }
     }
 }
