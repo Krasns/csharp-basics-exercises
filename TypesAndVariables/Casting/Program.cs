@@ -11,12 +11,12 @@ namespace Casting
     {
         static void Main(string[] args)
         {
-            first();
-            second();
+            First();
+            Second();
             Console.ReadKey();
         }
 
-        static void first()
+        static void First()
         {
             string a = "1";
             int b = 2;
@@ -26,13 +26,9 @@ namespace Casting
 
             int sum = Convert.ToInt32(int.Parse(a) + b + c + d + e);
             Console.WriteLine(sum);
-
-            //fixme - should be 15 :|
-            //int sum = a + b + c + d + e;
-            //Console.WriteLine(sum);
         }
 
-        static void second()
+        static void Second()
         {
             String a = "1";
             int b = 2;
@@ -44,10 +40,6 @@ namespace Casting
 
             float sum = int.Parse(a) + b + c + (float)d + e;
             Console.WriteLine(sum);
-
-            //fixme - should be 15.5 :| 
-            //float sum = a + b + c + d + e;
-            //Console.WriteLine(sum);
         }
     }
 }

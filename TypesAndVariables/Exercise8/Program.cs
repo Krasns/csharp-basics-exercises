@@ -6,17 +6,17 @@ namespace Exercise8
     {
         static void Main(string[] args)
         {
-            long Minutes, Year, RemainingMinutes, Day;
+            long minutes, year, remainingMinutes, day;
 
             Console.WriteLine("Biggest number is 9223372036854775807.");
             Console.Write("Enter the number of minutes: ");
-            Minutes = Convert.ToInt64(Console.ReadLine());
+            minutes = Convert.ToInt64(Console.ReadLine());
 
-            Year = Minutes / 525600;
-            RemainingMinutes = Minutes % 525600;
-            Day = RemainingMinutes / 1440;
+            year = minutes / 525600;
+            remainingMinutes = minutes % 525600;
+            day = remainingMinutes / 1440;
 
-            Console.WriteLine($"{Minutes} minutes is {Year} years and {Day} days.");
+            Console.WriteLine($"{minutes} minutes is {year} years and {day} days.");
             Console.ReadKey();
         }
     }
