@@ -19,7 +19,7 @@ namespace Exercise10
                 Console.WriteLine();
                 if (number != number + i)
                 {
-                number = min + i;
+                    number = min + i;
                 }
                 for (int j = 0; j <= max - min; j++)
                 {
