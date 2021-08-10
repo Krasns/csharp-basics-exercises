@@ -40,7 +40,7 @@ namespace Exercise8_AsciiFigure
             }
             else
             {
-            Console.WriteLine("****");
+                Console.WriteLine("****");
             }
             Console.ReadKey();
         }
