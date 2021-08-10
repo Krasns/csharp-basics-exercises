@@ -1,4 +1,6 @@
-﻿namespace Exercise4
+﻿using System;
+
+namespace Exercise4
 {
     class Program
     {
@@ -8,15 +10,15 @@
 
             for (int i = 0; i < vowels.Length; i++)
             {
-                System.Console.Write(vowels[i] + " ");
+                Console.Write(vowels[i] + " ");
             }
-            System.Console.WriteLine();
+            Console.WriteLine();
             foreach (var item in vowels)
             {
-                System.Console.Write(item + " ");
+                Console.Write(item + " ");
             }
 
-            System.Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
