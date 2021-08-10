@@ -13,7 +13,6 @@ namespace Exercise2
             n = Convert.ToInt32(Console.ReadLine());
             sum = n;
 
-
             for (i = 0; i < n; i++)
             {
                 sum = sum * n;
