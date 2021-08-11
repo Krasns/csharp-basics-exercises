@@ -1,0 +1,24 @@
+﻿using System;
+
+namespace Exercise4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+
+            for (int i = 0; i < vowels.Length; i++)
+            {
+                Console.Write(vowels[i] + " ");
+            }
+            Console.WriteLine();
+            foreach (var item in vowels)
+            {
+                Console.Write(item + " ");
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
