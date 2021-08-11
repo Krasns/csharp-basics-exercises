@@ -18,7 +18,6 @@ namespace TicTacToe
             int column;
             int count = 0;
             string location;
-            char[,] savingData = new char[3, 3];
             while (count != 2)
             {
 
@@ -36,20 +35,8 @@ namespace TicTacToe
                         {
                             if (r == row && c == column)
                             {
-                                board[r, c] = savingData[row,column] = 'O';
+                                board[r, c] = 'O';
                             }
-                            else
-                            {
-                                board[r, c] = ' ';
-                            }
-                        }
-                    }
-
-                    for (var r = 0; r < 3; r++)
-                    {
-                        for (var c = 0; c < 3; c++)
-                        {
-                            board[r, c] = savingData[row, column];
                         }
                     }
 
@@ -70,20 +57,8 @@ namespace TicTacToe
                         {
                             if (r == row && c == column)
                             {
-                                savingData[row, column] = 'X';
+                                board[r, c] = 'X';
                             }
-                            else
-                            {
-                                board[r, c] = ' ';
-                            }
-                        }
-                    }
-
-                    for (var r = 0; r < 3; r++)
-                    {
-                        for (var c = 0; c < 3; c++)
-                        {
-                            board[r, c] = savingData[row, column];
                         }
                     }
 
