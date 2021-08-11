@@ -36,8 +36,7 @@ namespace TicTacToe
                         {
                             if (r == row && c == column)
                             {
-                                board[r, c] = 'O';
-                                savingData[row,column] = 'O';
+                                board[r, c] = savingData[row,column] = 'O';
                             }
                             else
                             {
@@ -45,6 +44,15 @@ namespace TicTacToe
                             }
                         }
                     }
+
+                    for (var r = 0; r < 3; r++)
+                    {
+                        for (var c = 0; c < 3; c++)
+                        {
+                            board[r, c] = savingData[row, column];
+                        }
+                    }
+
                     DisplayBoard();
                     player = 1;
                 }
@@ -62,7 +70,6 @@ namespace TicTacToe
                         {
                             if (r == row && c == column)
                             {
-                                board[r, c] = 'X';
                                 savingData[row, column] = 'X';
                             }
                             else
@@ -71,7 +78,15 @@ namespace TicTacToe
                             }
                         }
                     }
-                    DisplayBoard();
+
+                    for (var r = 0; r < 3; r++)
+                    {
+                        for (var c = 0; c < 3; c++)
+                        {
+                            board[r, c] = savingData[row, column];
+                        }
+                    }
+                            DisplayBoard();
                     player = 0;
                 }
 
