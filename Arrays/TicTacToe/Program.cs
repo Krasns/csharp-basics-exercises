@@ -36,12 +36,9 @@ namespace TicTacToe
                         {
                             if (r == row && c == column)
                             {
-<<<<<<< HEAD
                                 board[r, c] = savingData[row,column] = 'O';
-=======
                                 board[r, c] = 'O';
                                 savingData[row,column] = 'O';
->>>>>>> 31d12ec482505947182880d8ffcd2ca6c6e82353
                             }
                             else
                             {
@@ -49,7 +46,6 @@ namespace TicTacToe
                             }
                         }
                     }
-<<<<<<< HEAD
 
                     for (var r = 0; r < 3; r++)
                     {
@@ -59,8 +55,6 @@ namespace TicTacToe
                         }
                     }
 
-=======
->>>>>>> 31d12ec482505947182880d8ffcd2ca6c6e82353
                     DisplayBoard();
                     player = 1;
                 }
@@ -78,10 +72,7 @@ namespace TicTacToe
                         {
                             if (r == row && c == column)
                             {
-<<<<<<< HEAD
-=======
                                 board[r, c] = 'X';
->>>>>>> 31d12ec482505947182880d8ffcd2ca6c6e82353
                                 savingData[row, column] = 'X';
                             }
                             else
@@ -90,7 +81,6 @@ namespace TicTacToe
                             }
                         }
                     }
-<<<<<<< HEAD
 
                     for (var r = 0; r < 3; r++)
                     {
@@ -100,9 +90,7 @@ namespace TicTacToe
                         }
                     }
                             DisplayBoard();
-=======
                     DisplayBoard();
->>>>>>> 31d12ec482505947182880d8ffcd2ca6c6e82353
                     player = 0;
                 }
 
