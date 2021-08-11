@@ -37,8 +37,6 @@ namespace TicTacToe
                             if (r == row && c == column)
                             {
                                 board[r, c] = savingData[row,column] = 'O';
-                                board[r, c] = 'O';
-                                savingData[row,column] = 'O';
                             }
                             else
                             {
@@ -72,7 +70,6 @@ namespace TicTacToe
                         {
                             if (r == row && c == column)
                             {
-                                board[r, c] = 'X';
                                 savingData[row, column] = 'X';
                             }
                             else
@@ -89,7 +86,7 @@ namespace TicTacToe
                             board[r, c] = savingData[row, column];
                         }
                     }
-                            DisplayBoard();
+
                     DisplayBoard();
                     player = 0;
                 }
