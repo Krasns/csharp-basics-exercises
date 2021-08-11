@@ -6,29 +6,29 @@ namespace Exercise8
     {
         static void Main(string[] args)
         {
-            double[] BasePay = { 7.50, 8.20, 10.00};
-            int[] HoursWorked = { 35, 47, 73 };
-            double Pay = 0;
+            double[] basePay = { 7.50, 8.20, 10.00};
+            int[] hoursWorked = { 35, 47, 73 };
+            double pay = 0;
             double OverTimePay = 0;
             int HoursWorkedOver = 0;
 
-            for (int i = 0; i < BasePay.Length; i++)
+            for (int i = 0; i < basePay.Length; i++)
             {
-                if (HoursWorked[i] > 70 || BasePay[i] < 8)
+                if (hoursWorked[i] > 70 || basePay[i] < 8)
                 {
                     Console.WriteLine("Error!!");
                 }
-                else if (HoursWorked[i] > 40)
+                else if (hoursWorked[i] > 40)
                 {
-                    HoursWorkedOver = HoursWorked[i] - 40;
-                    OverTimePay = BasePay[i] + (BasePay[i] * 1.5);
-                    Pay = 40 * BasePay[i] + (HoursWorkedOver * OverTimePay);
-                    Console.WriteLine($"Employee {i+1} with BasePay {BasePay[i]} worked for {HoursWorked[i]} this week and did {HoursWorkedOver} and got ${Pay}");
+                    HoursWorkedOver = hoursWorked[i] - 40;
+                    OverTimePay = basePay[i] + (basePay[i] * 1.5);
+                    pay = 40 * basePay[i] + (HoursWorkedOver * OverTimePay);
+                    Console.WriteLine($"Employee {i+1} with BasePay {basePay[i]} worked for {hoursWorked[i]} this week and did {HoursWorkedOver} and got ${pay}");
                 }
                 else
                 {
-                    Pay = HoursWorked[i] * BasePay[i];
-                    Console.WriteLine($"Employee {i + 1} with BasePay {BasePay[i]} worked for {HoursWorked[i]} this week and got ${Pay}");
+                    pay = hoursWorked[i] * basePay[i];
+                    Console.WriteLine($"Employee {i + 1} with BasePay {basePay[i]} worked for {hoursWorked[i]} this week and got ${pay}");
                 }
             }
             Console.ReadKey();

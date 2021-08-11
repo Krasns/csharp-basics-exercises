@@ -19,6 +19,7 @@ namespace CalculateArea
 
                 if (choice == 1)
                 {
+                    Console.WriteLine("You chose 1");
                     calculateCircleArea();
                     Console.ReadKey();
                 }
@@ -45,10 +46,7 @@ namespace CalculateArea
         {
 
             int userChoice;
-            
-            // keyboard input
 
-            // Display the menu.
             Console.WriteLine("Geometry Calculator\n");
             Console.WriteLine("1. Calculate the Area of a Circle");
             Console.WriteLine("2. Calculate the Area of a Rectangle");
@@ -56,11 +54,8 @@ namespace CalculateArea
             Console.WriteLine("4. Quit\n");
             Console.WriteLine("Enter your choice (1-4) : ");
             var keyboard = Console.ReadKey();
-            Console.WriteLine();
-            // get input from user
             int.TryParse(keyboard.KeyChar.ToString(), out userChoice);
 
-            // validate input
             while (userChoice < 1 || userChoice > 4)
             {
                 Console.WriteLine("Please enter a valid range: 1, 2, 3, or 4: ");
@@ -85,6 +80,8 @@ namespace CalculateArea
         {
             decimal length = 0;
             decimal width = 0;
+
+            var keyboard = Console.ReadKey();
 
             Console.WriteLine("Enter length? ");
             length = Convert.ToDecimal(Console.ReadLine());

@@ -8,34 +8,20 @@ namespace Exercise1
         {
             int FirstNumber, SecondNumber,Sum, FirstDiff, SecondDiff;
 
-            Console.WriteLine("Enter two integers: ");
+            Console.WriteLine("Enter first integers: ");
             FirstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second integers: ");
             SecondNumber = Convert.ToInt32(Console.ReadLine());
 
             Sum = FirstNumber + SecondNumber;
             FirstDiff = FirstNumber - SecondNumber;
             SecondDiff = SecondNumber - FirstNumber;
 
-            if (FirstNumber == 15 || SecondNumber == 15)
-            {
+            if (FirstNumber == 15 || SecondNumber == 15 || Sum == 15 || FirstDiff == 15 || SecondDiff == 15)
                 Console.WriteLine(true);
-            }
-            else if (Sum == 15)
-            {
-                Console.WriteLine(true);
-            }
-            else if (FirstDiff == 15)
-            {
-                Console.WriteLine(true);
-            }
-            else if (SecondDiff == 15)
-            {
-                Console.WriteLine(true);
-            }
             else
-            {
                 Console.WriteLine(false);
-            }
+            
             Console.ReadKey();
         }
     }

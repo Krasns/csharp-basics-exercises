@@ -10,8 +10,8 @@ namespace CalculateArea
     {
         public static double areaOfCircle(decimal radius)
         {
-            double sum = Math.PI * Math.Pow(Convert.ToDouble(radius), 2);
-            return Math.Round(sum, 2);
+            double sum = Math.PI* Math.Pow(Convert.ToDouble(radius), 2);
+            return Math.Round(sum,2);
         }
 
         public static double areaOfRectangle(decimal length, decimal width)
