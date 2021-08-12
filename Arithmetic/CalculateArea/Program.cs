@@ -10,11 +10,10 @@ namespace CalculateArea
     {
         static void Main(string[] args)
         {
-            int choice; // The user's menu choice
+            int choice;
 
             do
             {
-                // Get the user's menu choice.
                 choice = getMenu();
 
                 if (choice == 1)
@@ -73,7 +72,7 @@ namespace CalculateArea
             decimal.TryParse(keyboard, out decimal radius);
 
             Console.WriteLine("The circle's area is "
-                    + Geometry.areaOfCircle(radius));
+                    + Geometry.AreaOfCircle(radius));
         }
 
         public static void calculateRectangleArea()
@@ -90,7 +89,7 @@ namespace CalculateArea
             width = Convert.ToDecimal(Console.ReadLine());
 
             Console.WriteLine("The rectangle's area is "
-                    + Geometry.areaOfTriangle(length, width));
+                    + Geometry.AreaOfTriangle(length, width));
         }
 
         public static void calculateTriangleArea()
@@ -107,7 +106,7 @@ namespace CalculateArea
             height = Convert.ToDecimal(Console.ReadLine());
 
             Console.WriteLine("The triangle's area is "
-                    + Geometry.areaOfRectangle(ground, height));
+                    + Geometry.AreaOfRectangle(ground, height));
         }
     }
 }

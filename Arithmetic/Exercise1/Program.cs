@@ -6,18 +6,18 @@ namespace Exercise1
     {
         static void Main(string[] args)
         {
-            int FirstNumber, SecondNumber,Sum, FirstDiff, SecondDiff;
+            int firstNumber, secondNumber,sum, firstDiff, secondDiff;
 
             Console.WriteLine("Enter first integers: ");
-            FirstNumber = Convert.ToInt32(Console.ReadLine());
+            firstNumber = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter second integers: ");
-            SecondNumber = Convert.ToInt32(Console.ReadLine());
+            secondNumber = Convert.ToInt32(Console.ReadLine());
 
-            Sum = FirstNumber + SecondNumber;
-            FirstDiff = FirstNumber - SecondNumber;
-            SecondDiff = SecondNumber - FirstNumber;
+            sum = firstNumber + secondNumber;
+            firstDiff = firstNumber - secondNumber;
+            secondDiff = secondNumber - firstNumber;
 
-            if (FirstNumber == 15 || SecondNumber == 15 || Sum == 15 || FirstDiff == 15 || SecondDiff == 15)
+            if (firstNumber == 15 || secondNumber == 15 || sum == 15 || firstDiff == 15 || secondDiff == 15)
                 Console.WriteLine(true);
             else
                 Console.WriteLine(false);

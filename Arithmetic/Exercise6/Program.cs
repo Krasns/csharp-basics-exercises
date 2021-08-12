@@ -6,7 +6,7 @@ namespace Exercise6
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i < 111; i++)
+            for (int i = 0; i < 110; i++)
             {
                 if ((i-1) % 11 == 0)
                 {
