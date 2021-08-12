@@ -1,31 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,dotnetcore
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudio,visualstudiocode,dotnetcore
-
-### DotnetCore ###
-# .NET Core build folders
-bin/
-obj/
-
-# Common node modules locations
-/node_modules
-/wwwroot/node_modules
-
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
-
-# Local History for Visual Studio Code
-.history/
-
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
+# Created by https://www.toptal.com/developers/gitignore/api/visualstudio
+# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudio
 
 ### VisualStudio ###
 ## Ignore Visual Studio temporary files, build results, and
@@ -38,7 +13,6 @@ obj/
 *.suo
 *.user
 *.userosscache
-*.sln
 *.sln.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
@@ -397,8 +371,15 @@ MigrationBackup/
 FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
 
 # Local History for Visual Studio Code
+.history/
 
 # Windows Installer files from build outputs
 *.cab
@@ -414,7 +395,4 @@ FodyWeavers.xsd
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,dotnetcore
-/**/*/*.csproj
-**/*/App.config
-**/**/AssemblyInfo.cs
+# End of https://www.toptal.com/developers/gitignore/api/visualstudio
