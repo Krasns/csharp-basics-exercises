@@ -20,7 +20,6 @@ namespace TicTacToe
             string location;
             while (count != 9)
             {
-
                 if (player == 0)
                 {
                     Console.Write("'O', choose your location (row -> space -> column): ");
@@ -37,56 +36,23 @@ namespace TicTacToe
                             {
                                 board[r, c] = 'O';
                             }
-                            if (board[0, 0] == 'O' && (board[0, 0] == board[0, 1]) && (board[0, 1] == board[0, 2]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[1, 0] == 'O' && (board[1, 0] == board[1, 1]) && (board[1, 1] == board[1, 2]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[2, 0] == 'O' && (board[2, 0] == board[2, 1]) && (board[2, 1] == board[2, 2]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[0, 0] == 'O' && (board[0, 0] == board[1, 0]) && (board[1, 0] == board[2, 0]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[0, 1] == 'O' && (board[0, 1] == board[1, 1]) && (board[1, 1] == board[1, 2]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[0, 2] == 'O' && (board[0, 2] == board[1, 2]) && (board[1, 2] == board[2, 2]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[0, 0] == 'O' && (board[0, 0] == board[1, 1]) && (board[1, 1] == board[2, 2]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[0, 2] == 'O' && (board[0, 2] == board[1, 1]) && (board[1, 1] == board[2, 0]))
+
+                            if (board[0, 0] == 'O' && (board[0, 0] == board[0, 1]) && (board[0, 1] == board[0, 2]) || 
+                                board[1, 0] == 'O' && (board[1, 0] == board[1, 1]) && (board[1, 1] == board[1, 2]) ||
+                                board[2, 0] == 'O' && (board[2, 0] == board[2, 1]) && (board[2, 1] == board[2, 2]) ||
+                                board[0, 0] == 'O' && (board[0, 0] == board[1, 0]) && (board[1, 0] == board[2, 0]) ||
+                                board[0, 1] == 'O' && (board[0, 1] == board[1, 1]) && (board[1, 1] == board[1, 2]) ||
+                                board[0, 2] == 'O' && (board[0, 2] == board[1, 2]) && (board[1, 2] == board[2, 2]) ||
+                                board[0, 0] == 'O' && (board[0, 0] == board[1, 1]) && (board[1, 1] == board[2, 2]) ||
+                                board[0, 2] == 'O' && (board[0, 2] == board[1, 1]) && (board[1, 1] == board[2, 0]))
                             {
                                 winner = 1;
                                 count = 8;
                             }
                         }
                     }
-                    if (winner ==1)
-                    {
-                        Console.WriteLine("  O wins!");
-                        Console.WriteLine();
-                        DisplayBoard();
-                        Console.ReadKey();
-                    }
-                    else
+
+                    if(count < 8)
                     {
                         DisplayBoard();
                         player = 1;
@@ -108,42 +74,15 @@ namespace TicTacToe
                             {
                                 board[r, c] = 'X';
                             }
-                            if (board[0, 0] == 'X' && (board[0, 0] == board[0, 1]) && (board[0, 1] == board[0, 2]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[1, 0] == 'X' && (board[1, 0] == board[1, 1]) && (board[1, 1] == board[1, 2]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[2, 0] == 'X' && (board[2, 0] == board[2, 1]) && (board[2, 1] == board[2, 2]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[0, 0] == 'X' && (board[0, 0] == board[1, 0]) && (board[1, 0] == board[2, 0]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[0, 1] == 'X' && (board[0, 1] == board[1, 1]) && (board[1, 1] == board[1, 2]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[0, 2] == 'X' && (board[0, 2] == board[1, 2]) && (board[1, 2] == board[2, 2]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[0, 0] == 'X' && (board[0, 0] == board[1, 1]) && (board[1, 1] == board[2, 2]))
-                            {
-                                winner = 1;
-                                count = 8;
-                            }
-                            else if (board[0, 2] == 'X' && (board[0, 2] == board[1, 1]) && (board[1, 1] == board[2, 0]))
+
+                            if (board[0, 0] == 'X' && (board[0, 0] == board[0, 1]) && (board[0, 1] == board[0, 2]) ||
+                                board[1, 0] == 'X' && (board[1, 0] == board[1, 1]) && (board[1, 1] == board[1, 2]) ||
+                                board[2, 0] == 'X' && (board[2, 0] == board[2, 1]) && (board[2, 1] == board[2, 2]) ||
+                                board[0, 0] == 'X' && (board[0, 0] == board[1, 0]) && (board[1, 0] == board[2, 0]) ||
+                                board[0, 1] == 'X' && (board[0, 1] == board[1, 1]) && (board[1, 1] == board[1, 2]) ||
+                                board[0, 2] == 'X' && (board[0, 2] == board[1, 2]) && (board[1, 2] == board[2, 2]) ||
+                                board[0, 0] == 'X' && (board[0, 0] == board[1, 1]) && (board[1, 1] == board[2, 2]) ||
+                                board[0, 2] == 'X' && (board[0, 2] == board[1, 1]) && (board[1, 1] == board[2, 0]))
                             {
                                 winner = 1;
                                 count = 8;
@@ -151,14 +90,7 @@ namespace TicTacToe
                         }
                     }
 
-                    if (winner == 1)
-                    {
-                        Console.WriteLine("  X wins!");
-                        Console.WriteLine();
-                        DisplayBoard();
-                        Console.ReadKey();
-                    }
-                    else
+                    if (count < 8)
                     {
                         DisplayBoard();
                         player = 0;
@@ -167,6 +99,27 @@ namespace TicTacToe
                 count++;
             }
 
+            if (winner == 1)
+            {
+                Console.WriteLine("  O wins!");
+                Console.WriteLine();
+                DisplayBoard();
+                Console.ReadKey();
+            }
+            else if(winner == 2)
+            {
+                Console.WriteLine("  X wins!");
+                Console.WriteLine();
+                DisplayBoard();
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("  Game is tie!");
+                Console.WriteLine();
+                DisplayBoard();
+                Console.ReadKey();
+            }
         }
 
         private static void DisplayBoard()
