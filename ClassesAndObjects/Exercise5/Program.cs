@@ -6,16 +6,7 @@ namespace Exercise5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter day:");
-            int day = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Enter month:");
-            int month = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Enter year:");
-            int year = Convert.ToInt32(Console.ReadLine());
-
-            var date = new Date(day, month, year);
+            var date = new Date(10, 11, 2013);
             date.DisplayDate();
             Console.ReadKey();
         }
