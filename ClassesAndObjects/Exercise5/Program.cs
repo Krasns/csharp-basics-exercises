@@ -7,13 +7,13 @@ namespace Exercise5
         static void Main(string[] args)
         {
             Console.WriteLine("Enter day:");
-            string day = Console.ReadLine();
+            int day = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter month:");
-            string month = Console.ReadLine();
+            int month = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter year:");
-            string year = Console.ReadLine();
+            int year = Convert.ToInt32(Console.ReadLine());
 
             var date = new Date(day, month, year);
             date.DisplayDate();
