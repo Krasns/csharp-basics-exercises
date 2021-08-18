@@ -5,11 +5,9 @@
         double startKilometers;
         double endKilometers;
         double _liters;
-        public Car(double startOdo, double endingOdo, double liters)
+        public Car(double startOdo)
         {
             startKilometers = startOdo;
-            endKilometers = endingOdo;
-            _liters = liters;
         }
 
         public double CalculateConsumption()
@@ -34,7 +32,7 @@
 
         public void FillUp(int mileage, double liters)
         {
-            startKilometers = mileage;
+            startKilometers = endKilometers;
             endKilometers += mileage;
             _liters += liters;
         }
