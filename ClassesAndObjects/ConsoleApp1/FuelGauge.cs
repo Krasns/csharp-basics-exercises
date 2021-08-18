@@ -18,7 +18,10 @@
 
         public void DecreaseLevel()
         {
+            if (_fuelLevel>0)
+            {
             _fuelLevel--;
+            }
         }
     }
 }
