@@ -15,9 +15,6 @@ namespace BankAccount
             Name = name;
             Balance = balance;
         }
-        //public string Name { get; set; }
-        //public double Balance { get; set; }
-
         public string ShowUserNameAndBalance()
         {
             return $"{Name}, ${Math.Abs(Math.Round(Balance,2))}";
