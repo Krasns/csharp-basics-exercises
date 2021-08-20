@@ -7,20 +7,22 @@
 
         public Account(string v1, double v2)
         {
-            
+            _name = v1;
+            _money = v2;
         }
 
-        public double withdrawal(double i)
+        public double Withdrawal(double i)
         {
-            return i;
+            _money -= i;
+            return _money;
         }
 
-        public void deposit(double i)
+        public void Deposit(double i)
         {
-            
+            _money += i;
         }
 
-        public double balance()
+        public double Balance()
         {
             return _money;
         }
