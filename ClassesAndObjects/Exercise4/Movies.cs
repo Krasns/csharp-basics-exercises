@@ -24,6 +24,13 @@ namespace Exercise4
         }
         public string[] GetPG(string[] arr)
         {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == "PG")
+                {
+                
+                }
+            }
             return arr;
         }
     }
