@@ -28,8 +28,8 @@ namespace Exercise8_SavingsAccount
         }
         public void MonthlyInterest(double interestRate) 
         {
-            Amount += (interestRate / 12) * Amount;
             TotalInterestEarned += (interestRate / 12) * Amount;
+            Amount += (interestRate / 12) * Amount;
         }
         public void TotalShown()
         {
