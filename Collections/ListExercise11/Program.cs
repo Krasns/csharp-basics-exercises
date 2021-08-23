@@ -10,19 +10,39 @@ namespace ListExercise11
     {
         static void Main(string[] args)
         {
-            //TODO: Create an List with string elements
+            var todo = new List<string>();
+            todo.Add("one");
+            todo.Add("big");
+            todo.Add("two");
+            todo.Add("car");
+            todo.Add("red");
+            todo.Add("there");
+            todo.Add("blank");
+            todo.Add("name");
+            todo.Add("nine");
+            todo.Add("ten");
 
-            //TODO: Add 10 values to list
+            todo.RemoveAt(4);
+            todo.Insert(4,"new value");
 
-            //TODO: Add new value at 5th position
+            todo.RemoveAt(todo.Count - 1);
+            todo.Insert(todo.Count - 1, "Last Position");
+            todo.Sort();
 
-            //TODO: Change value at last position (Calculate last position programmatically)
+            if (todo.Contains("FooBar"))
+            {
+                Console.WriteLine("List contains foobar!");
+            }
+            else
+            {
+                Console.WriteLine("List dosent contain foobar!");
+            }
 
-            //TODO: Sort your list in alphabetical order
-
-            //TODO: Check if your list contains "Foobar" element
-
-            //TODO: Print each element of list using loop
+            foreach (var item in todo)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
         }
     }
 }
