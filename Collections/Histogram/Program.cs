@@ -13,11 +13,13 @@ namespace Histogram
 
         private static void Main(string[] args)
         {
-            var readText = File.ReadAllLines(Path);
+            var readText = File.ReadAllLines(@"D:\Codelex Lekcijas\csharp-basics-exercises\Collections\Histogram\midtermscores.txt");
             foreach (var s in readText)
             {
                 Console.WriteLine(s);
             }
+            
+            Console.ReadKey();
         }
     }
 }
