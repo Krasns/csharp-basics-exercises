@@ -5,12 +5,12 @@ namespace PhoneBook
 {
     public class PhoneDirectory
     {
-        private PhoneEntry[] _data;
+        private SortedDictionary<string, string> _data { get; set; }
         private int _dataCount;
 
         public PhoneDirectory()
         {
-            _data = new PhoneEntry[1];
+            _data = new SortedDictionary<string,string> ();
             _dataCount = 0;
         }
 
@@ -18,7 +18,7 @@ namespace PhoneBook
         {
             for (var i = 0; i < _dataCount; i++)
             {
-                if (_data[i].name.Equals(name))
+                if (_data.Keys.Equals(name))
                 {
                     return i;
                 }
@@ -36,7 +36,7 @@ namespace PhoneBook
             }
             else
             {
-                return _data[position].number;
+                return _data.Values.ToString();
             }
         }
 
@@ -46,24 +46,10 @@ namespace PhoneBook
             {
                 throw new Exception("name and number cannot be null");
             }
-
-            var i = Find(name);
-            if (i >= 0)
-            {
-                _data[i].number = number;
-            }
-            else
-            {
-                if (_dataCount == _data.Length)
-                {
-                    Array.Resize(ref _data, (2 * _data.Length));
-                }
-
-                var newEntry = new SortedDictionary<string, string> ();
-                newEntry.Add(name, number);
-                _data[_dataCount] = newEntry;
-                _dataCount++;
-            }
+            var newEntry = new SortedDictionary<string, string>();
+            newEntry.Add(name, number);
+            _data = newEntry;
+            _dataCount++;
         }
     }
 }
