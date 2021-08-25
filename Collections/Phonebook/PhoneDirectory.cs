@@ -46,10 +46,19 @@ namespace PhoneBook
             {
                 throw new Exception("name and number cannot be null");
             }
-            var newEntry = new SortedDictionary<string, string>();
-            newEntry.Add(name, number);
-            _data = newEntry;
-            _dataCount++;
+
+            var i = Find(name);
+            if (i >= 0)
+            {
+                _data.Add(name,number);
+            }
+            else
+            {
+                var newEntry = new SortedDictionary<string, string> ();
+                newEntry.Add(name, number);
+                _data = newEntry;
+                _dataCount++;
+            }
         }
     }
 }
