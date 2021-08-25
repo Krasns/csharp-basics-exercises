@@ -22,13 +22,13 @@ namespace Exercise4
             _title = title;
             _studio = studio;
         }
-        public string[] GetPG(string[] arr)
+        public List<string> GetPG(List<string> arr)
         {
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < arr.Count; i++)
             {
                 if (arr[i] == "PG")
                 {
-                
+                    
                 }
             }
             return arr;

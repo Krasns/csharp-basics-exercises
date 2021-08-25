@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Exercise4
 {
@@ -11,6 +12,8 @@ namespace Exercise4
             var secondMovie = new Movies("Glass", "Buena Vista International", "PG­13");
             var thirdMovie = new Movies("Spider-Man: Into the Spider-Verse", "Columbia Pictures", "PG");
 
+            var pg = new List<string>();
+            firstMovie.GetPG(pg);
         }
     }
 }
