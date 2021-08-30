@@ -2,18 +2,18 @@ using System;
 
 namespace DragRace
 {
-    public class Lexus
+    public class Lexus : Car
     {
         private int currentSpeed = 0;
 
         public void SpeedUp() 
         {
-            currentSpeed;
+            currentSpeed++;
         }
 
         public void SlowDown() 
         {
-            currentSpeed;
+            currentSpeed--;
         }
 
         public string ShowCurrentSpeed() 
@@ -23,7 +23,7 @@ namespace DragRace
 
         public void UseNitrousOxideEngine() 
         {
-            currentSpeed;
+            currentSpeed+=2;
         }
 
         public void StartEngine() 
