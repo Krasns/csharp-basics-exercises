@@ -2,8 +2,6 @@ namespace AdApp
 {
     public class Hoarding: Advert
     {
-        private int _rate;
-        //per day
         private int _numDays;
         private int _surCharge;
         private bool _isPrimeLocation;
