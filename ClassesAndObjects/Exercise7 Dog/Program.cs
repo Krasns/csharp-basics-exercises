@@ -6,7 +6,6 @@ namespace Exercise7_Dog
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
         }
     }
 }
