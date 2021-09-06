@@ -22,10 +22,10 @@ namespace Exercise4
             _title = title;
             _studio = studio;
         }
-        public string[] GetPG(string[] pgIn)
+        public List<string> GetPG(List<string> pgIn)
         {
-            string[] pgOut = new string[3];
-            for (int i = 0; i < pgIn.Length; i++)
+            List<string> pgOut = new List<string>();
+            for (int i = 0; i < pgIn.Count; i++)
             {
                 if (pgIn[i] == "PG")
                 {
