@@ -10,7 +10,6 @@ namespace Exercise7_Dog
     {
         static void Main(string[] args)
         {
-
             Dog max = new Dog("Max", "male", "Lady", "Rocky");
             Dog rocky = new Dog("Rocky", "male", "Molly", "Sam");
             Dog sparky = new Dog("Sparky", "male");

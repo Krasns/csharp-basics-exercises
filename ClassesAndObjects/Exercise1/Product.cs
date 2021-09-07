@@ -16,7 +16,6 @@ namespace Exercise1
             _name = name;
             Price = priceAtStart;
             Amount = amountAtStart;
-
         }
         public void PrintProduct()
         {
