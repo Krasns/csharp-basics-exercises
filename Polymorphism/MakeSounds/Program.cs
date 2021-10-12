@@ -6,7 +6,22 @@ namespace MakeSounds
     {
         private static void Main(string[] args)
         {
-            
+            var sound = new Firework();
+
+            var radioBrand = new Radio();
+            radioBrand.AddRadio("Samsung");
+            radioBrand.AddRadio("Sony");
+            radioBrand.AddRadio("LG");
+            radioBrand.Display();
+            Console.WriteLine();
+
+            var parrot = new Parrot();
+            parrot.AddColor("Black");
+            parrot.AddColor("White");
+            parrot.AddColor("Red");
+            parrot.Display();
+
+            Console.ReadKey();
         }
     }
 }
