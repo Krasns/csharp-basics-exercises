@@ -6,8 +6,6 @@ namespace MakeSounds
     {
         private static void Main(string[] args)
         {
-            var sound = new Firework();
-
             var radioBrand = new Radio();
             radioBrand.AddRadio("Samsung");
             radioBrand.AddRadio("Sony");

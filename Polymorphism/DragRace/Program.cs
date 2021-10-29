@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DragRace
 {
@@ -15,7 +16,20 @@ namespace DragRace
 
         private static void Main(string[] args)
         {
-           
+            //var tesla = new Tesla();
+            //var honda = new Honda();
+            //var lexus = new Lexus();
+            //var bmw = new Bmw();
+            //var audi = new Audi();
+
+            //var cars = new List<object>();
+            //cars.Add(tesla);
+            //cars.Add(honda);
+            //cars.Add(lexus);
+            //cars.Add(bmw);
+            //cars.Add(audi);
+
+            Console.ReadLine();
         }
     }
 }

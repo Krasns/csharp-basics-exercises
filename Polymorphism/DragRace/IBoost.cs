@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DragRace
 {
-    interface Boost
+    interface IBoost : ICar
     {
+        public void UseNitrousOxideEngine()
+        {
+            currentSpeed += 2;
+        }
     }
 }
